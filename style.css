@@ -1,0 +1,83 @@
+/* 
+Use apple calculator as a reference point
+*/
+::placeholder {
+    color: rgb(255, 255, 255);
+}
+input {
+    background-color: rgb(75, 75, 75);
+    color: rgb(255, 255, 255);
+    font: large helvetica;
+    border: none;
+    padding-left: 15px;
+}
+button {
+    border: 1px solid rgb(100,100,100);
+    color: rgb(255, 255, 255);
+    font: bold large helvetica;
+    font-size: 24px;
+    outline: none;
+}
+button:hover {
+    transform: scale(1.05);
+    filter: brightness(125%);
+}
+body {
+    position: relative;
+    top: 10vh;
+    background-color: rgb(253, 253, 243);
+}
+.container {
+    background-color: lightgray;
+    height: 70vh;
+    width: 60vh;
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(4, auto);
+    row-gap: 0;
+    column-gap: 0;
+    grid-template-areas:
+        "input input input input"
+        "clr sign perc div"
+        "seven eight nine mult"
+        "four five six minus"
+        "one two three plus"
+        "zro zro dec eql";    
+}
+.spcl-btn {
+    background-color: rgb(122, 122, 122);
+}
+.num-btn {
+    background-color: rgb(141, 141, 141);
+}
+.opr-btn:focus {
+    background-color: rgb(238, 255, 0);
+}
+.opr-btn, .eval-btn {
+    background-color: #ff944d;
+}
+.input-io {
+    grid-area: input;
+    font-size: 36px;
+}
+#div-btn {
+    grid-area: div;
+}
+#mlt-btn {
+    grid-area: mult;
+}
+#sub-btn {
+    grid-area: minus;
+}
+#add-btn {
+    grid-area: plus;
+}
+#eql-btn {
+    grid-area: eql;
+}
+#zero {
+    grid-area: zro;
+}
+#dec-btn {
+    grid-area: dec;
+}
